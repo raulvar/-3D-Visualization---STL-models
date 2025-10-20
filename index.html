@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catálogo de Visualizadores STL</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/STLLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/controls/OrbitControls.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Modelos 3D</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .modelo {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    model-viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-  <h1>Catálogo de Modelos STL</h1>
 
-  <div class="catalogo" id="catalogo"></div>
-
-  <div class="visor" id="visor">
-    <button id="cerrar">✖ Cerrar</button>
-    <div id="contenedor3d"></div>
+  <div class="modelo">
+    <model-viewer src="modelo1.glb" alt="Modelo 1" auto-rotate camera-controls background-color="#ffffff"></model-viewer>
+  </div>
+  <div class="modelo">
+    <model-viewer src="modelo2.glb" alt="Modelo 2" auto-rotate camera-controls background-color="#ffffff"></model-viewer>
+  </div>
+  <div class="modelo">
+    <model-viewer src="modelo3.glb" alt="Modelo 3" auto-rotate camera-controls background-color="#ffffff"></model-viewer>
   </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
