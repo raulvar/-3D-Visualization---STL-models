@@ -70,23 +70,37 @@
 
   <div class="grid-container">
     <div class="modelo">
-      <model-viewer src="modelo1.glb" alt="Modelo 1" auto-rotate camera-controls background-color="#000"></model-viewer>
+      <model-viewer src="modelo1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="0.53" shadow-softness="0.74" environment-image="legacy">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+      ></model-viewer>
       <div class="info">
-        <h3>Modelo 1</h3>
+        <h3>Cráneo con traumatismo</h3>
         <p>Este es un modelo de ejemplo con descripción breve.</p>
       </div>
     </div>
+
+
+
+
     <div class="modelo">
       <model-viewer src="modelo2.glb" alt="Modelo 2" auto-rotate camera-controls background-color="#000"></model-viewer>
       <div class="info">
-        <h3>Modelo 2</h3>
+        <h3>Mano</h3>
         <p>Otro modelo interesante que puedes ver desde todos los ángulos.</p>
       </div>
     </div>
     <div class="modelo">
       <model-viewer src="modelo3.glb" alt="Modelo 3" auto-rotate camera-controls background-color="#000"></model-viewer>
       <div class="info">
-        <h3>Modelo 3</h3>
+        <h3>Brazo - Niño</h3>
         <p>Un diseño único, perfecto para análisis 3D.</p>
       </div>
     </div>
@@ -94,46 +108,18 @@
     <div class="modelo">
       <model-viewer src="modelo4.glb" alt="Modelo 4" auto-rotate camera-controls background-color="#000"></model-viewer>
       <div class="info">
-        <h3>Modelo 4</h3>
+        <h3>Hombro con osteofitos</h3>
         <p>Este modelo presenta una complejidad geométrica interesante.</p>
       </div>
     </div>
     <div class="modelo">
       <model-viewer src="modelo5.glb" alt="Modelo 5" auto-rotate camera-controls background-color="#000"></model-viewer>
       <div class="info">
-        <h3>Modelo 5</h3>
+        <h3>Cadera con implante de cadera</h3>
         <p>Ideal para ver detalles de estructuras.</p>
       </div>
     </div>
-    <div class="modelo">
-      <model-viewer src="modelo6.glb" alt="Modelo 6" auto-rotate camera-controls background-color="#000"></model-viewer>
-      <div class="info">
-        <h3>Modelo 6</h3>
-        <p>Un modelo minimalista pero detallado.</p>
-      </div>
-    </div>
 
-    <div class="modelo">
-      <model-viewer src="modelo7.glb" alt="Modelo 7" auto-rotate camera-controls background-color="#000"></model-viewer>
-      <div class="info">
-        <h3>Modelo 7</h3>
-        <p>Estilo futurista con alta definición.</p>
-      </div>
-    </div>
-    <div class="modelo">
-      <model-viewer src="modelo8.glb" alt="Modelo 8" auto-rotate camera-controls background-color="#000"></model-viewer>
-      <div class="info">
-        <h3>Modelo 8</h3>
-        <p>Un modelo diseñado con curvas suaves.</p>
-      </div>
-    </div>
-    <div class="modelo">
-      <model-viewer src="modelo9.glb" alt="Modelo 9" auto-rotate camera-controls background-color="#000"></model-viewer>
-      <div class="info">
-        <h3>Modelo 9</h3>
-        <p>Ideal para ver interacciones entre formas.</p>
-      </div>
-    </div>
   </div>
 
 </body>
